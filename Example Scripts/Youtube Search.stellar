@@ -1,0 +1,6 @@
+include <stlmain.stlcore>
+
+// search youtube
+if NetworkUtil.check_connection(): // check internet connection
+	query = input("Please search query:")
+	NetworkUtil.open_link(f"www.youtube.com/results?search_query={query}")

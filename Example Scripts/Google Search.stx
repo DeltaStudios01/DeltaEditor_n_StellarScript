@@ -1,0 +1,6 @@
+include <stlmain.stlcore>
+
+// search google
+if NetworkUtil.check_connection(): // check internet connection
+	link = NetworkUtil.search_on_google(input("Please search query:"))
+	NetworkUtil.open_link(link)

@@ -1,0 +1,14 @@
+include <stlmain.stlcore>
+
+// prime or not number detector
+number = input("Please give a number")
+
+if number.lower() in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']: 
+	Stellar.displayMessage(Stellar, "detector", f"{number} is not a number!")
+else: 
+	detector = MathUtil.is_prime(int(number))	
+
+	if detector:
+		Stellar.displayMessage(Stellar, "detector", f"{number} is a prime number")
+	else:
+		Stellar.displayMessage(Stellar, "detector", f"{number} is not a prime number")

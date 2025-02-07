@@ -1,0 +1,23 @@
+include <stlmain.stlcore>
+from tkinter include <messagebox> as msg
+include <random> as r
+
+// simple math game
+
+p_name = input("What is your name?")
+msg.showinfo("Simple Math Game", f"Hello, {p_name}!")
+
+symbols = ["-", "+", "*"]
+question = f"{r.randint(1, 50)} {r.choice(symbols)} {r.randint(1, 100)}" 
+
+while True:
+	answer = input(f"What is {question}?")
+
+	if answer == "": continue
+
+	if answer == eval(answer): 
+		msg.showinfo("Simple Math Game", f"Congratulation {p_name}, you won!")
+		break
+	else:
+		msg.showinfo("Simple Math Game", f"Im sorry {p_name}, but you lose!")
+		break
